@@ -11,7 +11,7 @@ void video_mode(BYTE modo){
 
 void pause(){
   union REGS inregs, outregs;
-  inregs.h.ah = 8;
+  inregs.h.ah = 1;
   int86(0x21, &inregs, &outregs);
 }
 
