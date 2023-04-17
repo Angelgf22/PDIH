@@ -61,16 +61,15 @@ int main(int argc, char *argv[]) {
     right_paddle.size = 7;
     right_paddle.x = screen_x - 2;
     right_paddle.y = screen_y/2 - right_paddle.size/2;
+    right_paddle.goals = 0;
 
     left_paddle.size = 7;
     left_paddle.x = 2;
     left_paddle.y = screen_y/2 - left_paddle.size/2;
-    right_paddle.goals = 0;
     left_paddle.goals = 0;
 
     while(!quit) {
         clear();
-        wbkgd(window, COLOR_PAIR(2));
         mvprintw(y, x, "o");
         for(i = 0 ; i < screen_y; ++i) {
             mvprintw(i, screen_x/2, "|");
